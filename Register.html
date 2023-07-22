@@ -1,0 +1,395 @@
+<html>
+<head>
+    <title>Registration Page</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        width: 200%;
+        text-align: center;
+        box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .login_head {
+        background-color: blueviolet;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+        font-family: 'Times New Roman', Times, serif;
+        border-radius: 50px;
+        width: 100%;
+        height: 3%;
+    }
+
+    .inputs input[type="text"],
+    .inputs input[type="number"],
+    .inputs input[type="date"],
+    .inputs input[type="email"],
+    .inputs input[type="textarea"],
+    .inputs input[type="password"],
+    .inputs input[type="tel"] {
+        border-radius: 50px;
+        border-color: azure;
+        align-items: center;
+        text-align: center;
+        width: 50%;
+        height: 3%;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+
+    .login input[type="submit"] {
+        border-radius: 50px;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        height: 4%;
+        background-color: mediumorchid;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    label {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 22px;
+    }
+</style>
+<body>
+    <form id="registrationForm" onclick="Login.html" action="#">
+        <div class="login_head">
+            <h2>REGISTRATION FORM</h2>
+        </div>
+
+        <br /><br /><br /><br />
+
+        <div class="inputs">
+            <label>First Name</label>&nbsp&nbsp&nbsp&nbsp
+            <input type="text" id="fname" required /><br /><br />
+            <label>Second Name</label>&nbsp&nbsp&nbsp&nbsp
+            <input type="text" id="fname1" />
+        </div>
+
+        <br /><br />
+
+        <div class="inputs">
+            <label>Age</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="number" id="age" value="age" required />
+        </div>
+
+        <br /><br />
+        <div class="inputs">
+            <label>Date of Birth</label>&nbsp&nbsp&nbsp
+            <input type="date" id="dob" value="dob" required />
+        </div>
+
+        <br /><br />
+
+        <div>
+            <label>Gender</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label>Male</label>&nbsp
+            <input type="radio" id="female" name="gender" value="female" required />
+            <label>Female</label>&nbsp
+            <input type="radio" id="other" name="gender" value="other" required />
+            <label>Other</label>
+        </div>
+
+        <br /><br />
+
+        <div class="inputs">
+            <label>Phone Number</label>&nbsp&nbsp&nbsp
+            <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <br /><br />
+
+        <div class="inputs">
+            <label>Email</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="email" id="email" value="email" required />
+        </div>
+
+        <br /><br />
+        <div class="inputs">
+            <label>Address</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <textarea name="address" id="address" required></textarea>
+        </div>
+
+        <br /><br />
+
+        <div>
+            <label>State</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <Select id="state" onchange="populateCities()" required>
+                <option value="">Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+            </Select>
+            <br /><br /><br /><br />
+            <label>City</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <select id="city" name="city" required>
+                <option value="">Select City</option>
+                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                <option value="Kochi">Kochi</option>
+                <option value="Kozhikode">Kozhikode</option>
+                <option value="Thrissur">Thrissur</option>
+                <option value="Kollam">Kollam</option>
+                <option value="Alappuzha">Alappuzha</option>
+                <option value="Palakkad">Palakkad</option>
+                <option value="Kottayam">Kottayam</option>
+                <option value="Malappuram">Malappuram</option>
+                <option value="Kannur">Kannur</option>
+                <option value="Pathanamthitta">Pathanamthitta</option>
+                <option value="Idukki">Idukki</option>
+                <option value="Ernakulam">Ernakulam</option>
+            </select>
+        </div>
+
+        <br /><br />
+
+        <div class="inputs">
+            <label>User Name</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="text" name="username" required /><br /><br />
+            <label>Password</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="password" id="pass" name="pass" required /><br /><br />
+            <label>Confirm Password</label>&nbsp&nbsp
+            <input type="password" id="cpass" name="pass" required />
+        </div>
+        <br /><br />
+
+        <div class="login">
+            <input type="submit" value="Register" />
+        </div>
+    </form>
+    <script>
+
+        const registrationForm = document.getElementById("registrationForm");
+        const passwordInput = document.getElementById("pass");
+        const confirmPasswordInput = document.getElementById("cpass");
+        const passw = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
+
+        registrationForm.addEventListener("submit", function (event) {
+            if (!validatePasswordsMatch()) {
+                event.preventDefault();
+
+            }
+        });
+
+        function validatePasswordsMatch() {
+            if (passwordInput.value !== confirmPasswordInput.value) {
+
+                alert("Passwords do not match!");
+                return false;
+            }
+            else if (!(passwordInput.value.match(passw))) {
+                alert("Password must be in the given pattern");
+                return false;
+            }
+            else {
+
+                return true;
+            }
+        }
+
+        function populateCities() {
+            const stateSelect = document.getElementById("state");
+            const citySelect = document.getElementById("city");
+            const selectedState = stateSelect.value;
+
+            // Clear previous options
+            citySelect.innerHTML = "<option value=''>Select City</option>";
+
+            if (selectedState === "Andhra Pradesh") {
+                addCityOption(citySelect, "Visakhapatnam");
+                addCityOption(citySelect, "Vijayawada");
+                addCityOption(citySelect, "Guntur");
+                addCityOption(citySelect, "Nellore");
+                addCityOption(citySelect, "Tirupati");
+            } else if (selectedState === "Arunachal Pradesh") {
+                addCityOption(citySelect, "Itanagar");
+                addCityOption(citySelect, "Tawang");
+                addCityOption(citySelect, "Naharlagun");
+                addCityOption(citySelect, "Bomdila");
+                addCityOption(citySelect, "Roing");
+            }
+            else if (selectedState === "Kerala") {
+                addCityOption(citySelect, "Thiruvananthapuram");
+                addCityOption(citySelect, "Kannur");
+                addCityOption(citySelect, "Kozhikode");
+                addCityOption(citySelect, "Ernakulam");
+                addCityOption(citySelect, "Thrissur");
+                addCityOption(citySelect, "Kasargod");
+                addCityOption(citySelect, "Malappuram");
+                addCityOption(citySelect, "Vynad");
+                addCityOption(citySelect, "Idukki");
+                addCityOption(citySelect, "Alappuzha");
+                addCityOption(citySelect, "Palakkad");
+                addCityOption(citySelect, "Patanamthitta");
+                addCityOption(citySelect, "Kollam");
+
+            } else if (selectedState === "Assam") {
+                addCityOption(citySelect, "Guwahati");
+                addCityOption(citySelect, "Silchar");
+                addCityOption(citySelect, "Dibrugarh");
+                addCityOption(citySelect, "Jorhat");
+                addCityOption(citySelect, "Tezpur");
+            } else if (selectedState === "Bihar") {
+                addCityOption(citySelect, "Patna");
+                addCityOption(citySelect, "Gaya");
+                addCityOption(citySelect, "Muzaffarpur");
+                addCityOption(citySelect, "Bhagalpur");
+                addCityOption(citySelect, "Darbhanga");
+            } else if (selectedState === "Chhattisgarh") {
+                addCityOption(citySelect, "Raipur");
+                addCityOption(citySelect, "Bhilai");
+                addCityOption(citySelect, "Bilaspur");
+                addCityOption(citySelect, "Korba");
+                addCityOption(citySelect, "Durg");
+            } else if (selectedState === "Goa") {
+                addCityOption(citySelect, "Panaji");
+                addCityOption(citySelect, "Margao");
+                addCityOption(citySelect, "Vasco da Gama");
+                addCityOption(citySelect, "Mapusa");
+                addCityOption(citySelect, "Ponda");
+            } else if (selectedState === "Gujarat") {
+                addCityOption(citySelect, "Ahmedabad");
+                addCityOption(citySelect, "Surat");
+                addCityOption(citySelect, "Vadodara");
+                addCityOption(citySelect, "Rajkot");
+                addCityOption(citySelect, "Gandhinagar");
+            } else if (selectedState === "Haryana") {
+                addCityOption(citySelect, "Faridabad");
+                addCityOption(citySelect, "Gurgaon");
+                addCityOption(citySelect, "Panipat");
+                addCityOption(citySelect, "Ambala");
+                addCityOption(citySelect, "Yamunanagar");
+            } else if (selectedState === "Himachal Pradesh") {
+                addCityOption(citySelect, "Shimla");
+                addCityOption(citySelect, "Mandi");
+                addCityOption(citySelect, "Solan");
+                addCityOption(citySelect, "Dharamshala");
+                addCityOption(citySelect, "Kullu");
+            } else if (selectedState === "Jharkhand") {
+                addCityOption(citySelect, "Ranchi");
+                addCityOption(citySelect, "Jamshedpur");
+                addCityOption(citySelect, "Dhanbad");
+                addCityOption(citySelect, "Bokaro");
+                addCityOption(citySelect, "Hazaribagh");
+            } else if (selectedState === "Karnataka") {
+                addCityOption(citySelect, "Bengaluru");
+                addCityOption(citySelect, "Mysuru");
+                addCityOption(citySelect, "Hubballi-Dharwad");
+                addCityOption(citySelect, "Mangaluru");
+                addCityOption(citySelect, "Belagavi");
+            } else if (selectedState === "Madhya Pradesh") {
+                addCityOption(citySelect, "Indore");
+                addCityOption(citySelect, "Bhopal");
+                addCityOption(citySelect, "Jabalpur");
+                addCityOption(citySelect, "Gwalior");
+                addCityOption(citySelect, "Ujjain");
+            } else if (selectedState === "Maharashtra") {
+                addCityOption(citySelect, "Mumbai");
+                addCityOption(citySelect, "Pune");
+                addCityOption(citySelect, "Nagpur");
+                addCityOption(citySelect, "Nashik");
+                addCityOption(citySelect, "Thane");
+            } else if (selectedState === "Manipur") {
+                addCityOption(citySelect, "Imphal");
+                addCityOption(citySelect, "Thoubal");
+                addCityOption(citySelect, "Bishnupur");
+                addCityOption(citySelect, "Churachandpur");
+                addCityOption(citySelect, "Ukhrul");
+            } else if (selectedState === "Meghalaya") {
+                addCityOption(citySelect, "Shillong");
+                addCityOption(citySelect, "Tura");
+                addCityOption(citySelect, "Jowai");
+                addCityOption(citySelect, "Nongstoin");
+                addCityOption(citySelect, "Williamnagar");
+            } else if (selectedState === "Mizoram") {
+                addCityOption(citySelect, "Aizawl");
+                addCityOption(citySelect, "Lunglei");
+                addCityOption(citySelect, "Saiha");
+                addCityOption(citySelect, "Champhai");
+                addCityOption(citySelect, "Kolasib");
+            } else if (selectedState === "Nagaland") {
+                addCityOption(citySelect, "Kohima");
+                addCityOption(citySelect, "Dimapur");
+                addCityOption(citySelect, "Mokokchung");
+                addCityOption(citySelect, "Tuensang");
+                addCityOption(citySelect, "Wokha");
+            } else if (selectedState === "Odisha") {
+                addCityOption(citySelect, "Bhubaneswar");
+                addCityOption(citySelect, "Cuttack");
+                addCityOption(citySelect, "Rourkela");
+                addCityOption(citySelect, "Berhampur");
+                addCityOption(citySelect, "Sambalpur");
+            } else if (selectedState === "Punjab") {
+                addCityOption(citySelect, "Ludhiana");
+                addCityOption(citySelect, "Amritsar");
+                addCityOption(citySelect, "Jalandhar");
+                addCityOption(citySelect, "Patiala");
+                addCityOption(citySelect, "Bathinda");
+            } else if (selectedState === "Rajasthan") {
+                addCityOption(citySelect, "Jaipur");
+                addCityOption(citySelect, "Jodhpur");
+                addCityOption(citySelect, "Udaipur");
+                addCityOption(citySelect, "Kota");
+                addCityOption(citySelect, "Ajmer");
+            } else if (selectedState === "Sikkim") {
+                addCityOption(citySelect, "Gangtok");
+                addCityOption(citySelect, "Namchi");
+                addCityOption(citySelect, "Gyalshing");
+                addCityOption(citySelect, "Mangan");
+                addCityOption(citySelect, "Rangpo");
+            } else if (selectedState === "Tamil Nadu") {
+                addCityOption(citySelect, "Chennai");
+                addCityOption(citySelect, "Coimbatore");
+                addCityOption(citySelect, "Madurai");
+                addCityOption(citySelect, "Tiruchirappalli");
+                addCityOption(citySelect, "Salem");
+            }
+        }
+
+        function addCityOption(selectElement, cityName) {
+            const option = document.createElement("option");
+            option.text = cityName;
+            option.value = cityName;
+            selectElement.appendChild(option);
+        }
+
+    </script>
+
+</body>
+</html>
+
